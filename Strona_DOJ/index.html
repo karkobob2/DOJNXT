@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Department of Justice | Los Santos</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style/base.css">
+    <link rel="stylesheet" href="style/layout.css">
+    <link rel="stylesheet" href="style/components.css">
+    <link rel="stylesheet" href="style/hero.css">
+    <link rel="stylesheet" href="style/about.css">
+    <link rel="stylesheet" href="style/documents.css">
+    <link rel="stylesheet" href="style/schedule.css">
+    <link rel="stylesheet" href="style/archive.css">
+    <link rel="stylesheet" href="style/gallery.css">
+    <link rel="stylesheet" href="style/recruitment.css">
+    <link rel="stylesheet" href="style/footer.css">
+    <link rel="stylesheet" href="style/mobile.css">
+</head>
+
+<body>
+    <a class="skip-link" href="#maincontent">Przejdź do treści</a>
+
+    <div class="loader">
+        <div class="loader-icon"></div>
+    </div>
+    <div class="overlay" id="overlay"></div>
+
+    <nav id="navbar" role="navigation" aria-label="Główna nawigacja">
+        <div class="nav-container">
+            <a href="#home" class="logo"><i class="fas fa-balance-scale"></i> DOJ</a>
+            <ul class="nav-links">
+                <li><a href="#home">Strona Główna</a></li>
+                <li><a href="about.html">O Nas</a></li>
+                <li><a href="documents.html">Dokumenty</a></li>
+                <li><a href="schedule.html">Harmonogram</a></li>
+                <li><a href="archive.html">Archiwum</a></li>
+                <li><a href="#recruitment">Rekrutacja</a></li>
+            </ul>
+
+            <button class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+        <a href="#home">Strona Główna</a>
+        <a href="about.html">O Nas</a>
+        <a href="documents.html">Dokumenty</a>
+        <a href="schedule.html">Harmonogram</a>
+        <a href="archive.html">Archiwum</a>
+        <a href="#recruitment">Rekrutacja</a>
+    </div>
+
+    <a id="maincontent" tabindex="-1"></a>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <span class="hero-badge">State of San Andreas</span>
+            <h1>Department of Justice</h1>
+            <p>Stoimy na straży prawa i sprawiedliwości w Los Santos. Profesjonalizm, uczciwość i dedykacja to nasze fundamenty.</p>
+            <div class="hero-buttons">
+                <a href="#recruitment" class="btn btn-primary"><i class="fas fa-user-plus"></i> Dołącz do nas</a>
+                <a href="#documents" class="btn btn-outline"><i class="fas fa-file-alt"></i> Dokumenty</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="section-header fade-in">
+            <h2>O Departamencie</h2>
+            <p>Główny organ odpowiedzialny za egzekwowanie prawa i wymiar sprawiedliwości w San Andreas</p>
+        </div>
+        <div class="about-grid">
+            <div class="about-card fade-in">
+                <i class="fas fa-gavel"></i>
+                <h3>Wymiar Sprawiedliwości</h3>
+                <p>Prowadzimy sprawy sądowe, reprezentujemy stan w postępowaniach karnych i cywilnych. Dbamy o sprawiedliwe wyroki.</p>
+            </div>
+            <div class="about-card fade-in">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Ochrona Obywateli</h3>
+                <p>Chronimy prawa obywateli San Andreas, zapewniamy dostęp do sprawiedliwości i równe traktowanie przed prawem.</p>
+            </div>
+            <div class="about-card fade-in">
+                <i class="fas fa-file-contract"></i>
+                <h3>Tworzenie Prawa</h3>
+                <p>Współtworzymy i aktualizujemy kodeksy prawne, dbając o ich zgodność z konstytucją i potrzebami społeczeństwa.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="documents" id="documents">
+        <div class="section-header fade-in">
+            <h2>Dokumenty Prawne</h2>
+            <p>Oficjalna baza aktów prawnych obowiązujących na terenie San Andreas</p>
+        </div>
+        <div class="docs-grid">
+
+            <div class="doc-card fade-in">
+                <div class="doc-header">
+                    <div class="doc-icon"><i class="fas fa-balance-scale"></i></div>
+                    <div class="doc-info">
+                        <h3>Kodeks Karny</h3>
+                        <span>Wersja 1.0 | Aktualny</span>
+                    </div>
+                </div>
+                <p>Zbiór przepisów określających czyny zabronione i kary za ich popełnienie na terenie San Andreas.</p>
+                <div class="doc-footer">
+                    <span class="doc-meta">Ostatnia aktualizacja: 15.12.2025</span>
+                    <a href="https://docs.google.com/document/d/TWOJ_LINK_1" target="_blank" class="btn btn-small btn-doc" aria-label="Otwórz Kodeks Karny"><i class="fas fa-external-link-alt"></i> Otwórz</a>
+                </div>
+            </div>
+
+            <div class="doc-card fade-in">
+                <div class="doc-header">
+                    <div class="doc-icon"><i class="fas fa-car"></i></div>
+                    <div class="doc-info">
+                        <h3>Kodeks Drogowy</h3>
+                        <span>Wersja 1.0 | Aktualny</span>
+                    </div>
+                </div>
+                <p>Przepisy regulujące ruch drogowy i zachowanie wszystkich uczestników ruchu.</p>
+                <div class="doc-footer">
+                    <span class="doc-meta">Ostatnia aktualizacja: 15.12.2025</span>
+                    <a href="https://docs.google.com/document/d/TWOJ_LINK_2" target="_blank" class="btn btn-small btn-doc" aria-label="Otwórz Kodeks Drogowy"><i class="fas fa-external-link-alt"></i> Otwórz</a>
+                </div>
+            </div>
+
+            <div class="doc-card fade-in">
+                <div class="doc-header">
+                    <div class="doc-icon"><i class="fas fa-landmark"></i></div>
+                    <div class="doc-info">
+                        <h3>Konstytucja SA</h3>
+                        <span>Wersja 1.0 | Aktualny</span>
+                    </div>
+                </div>
+                <p>Najwyższy akt prawny określający ustrój państwa i podstawowe prawa obywatelskie.</p>
+                <div class="doc-footer">
+                    <span class="doc-meta">Ostatnia aktualizacja: 15.12.2025</span>
+                    <a href="https://docs.google.com/document/d/TWOJ_LINK_3" target="_blank" class="btn btn-small btn-doc" aria-label="Otwórz Konstytucję SA"><i class="fas fa-external-link-alt"></i> Otwórz</a>
+                </div>
+            </div>
+
+            <div class="doc-card fade-in">
+                <div class="doc-header">
+                    <div class="doc-icon"><i class="fas fa-handshake"></i></div>
+                    <div class="doc-info">
+                        <h3>Kodeks Cywilny</h3>
+                        <span>Wersja 1.0 | Aktualny</span>
+                    </div>
+                </div>
+                <p>Regulacje dotyczące stosunków prawnych między obywatelami i podmiotami.</p>
+                <div class="doc-footer">
+                    <span class="doc-meta">Ostatnia aktualizacja: 15.12.2025</span>
+                    <a href="https://docs.google.com/document/d/TWOJ_LINK_4" target="_blank" class="btn btn-small btn-doc" aria-label="Otwórz Kodeks Cywilny"><i class="fas fa-external-link-alt"></i> Otwórz</a>
+                </div>
+            </div>
+
+            <div class="doc-card fade-in">
+                <div class="doc-header">
+                    <div class="doc-icon"><i class="fas fa-clipboard-list"></i></div>
+                    <div class="doc-info">
+                        <h3>Kodeks Postępowania</h3>
+                        <span>Wersja 1.0 | Aktualny</span>
+                    </div>
+                </div>
+                <p>Procedury prowadzenia spraw karnych, cywilnych i administracyjnych.</p>
+                <div class="doc-footer">
+                    <span class="doc-meta">Ostatnia aktualizacja: 15.12.2025</span>
+                    <a href="https://docs.google.com/document/d/TWOJ_LINK_5" target="_blank" class="btn btn-small btn-doc" aria-label="Otwórz Kodeks Postępowania"><i class="fas fa-external-link-alt"></i> Otwórz</a>
+                </div>
+            </div>
+
+            <div class="doc-card fade-in">
+                <div class="doc-header">
+                    <div class="doc-icon"><i class="fas fa-crosshairs"></i></div>
+                    <div class="doc-info">
+                        <h3>Ustawa o Broni</h3>
+                        <span>Wersja 1.0 | Aktualny</span>
+                    </div>
+                </div>
+                <p>Regulacje dotyczące posiadania, noszenia i używania broni palnej.</p>
+                <div class="doc-footer">
+                    <span class="doc-meta">Ostatnia aktualizacja: 15.12.2025</span>
+                    <a href="https://docs.google.com/document/d/TWOJ_LINK_6" target="_blank" class="btn btn-small btn-doc" aria-label="Otwórz Ustawę o Broni"><i class="fas fa-external-link-alt"></i> Otwórz</a>
+                </div>
+            </div>
+
+            <div class="doc-card fade-in">
+                <div class="doc-header">
+                    <div class="doc-icon"><i class="fas fa-briefcase"></i></div>
+                    <div class="doc-info">
+                        <h3>Prawo Gospodarcze</h3>
+                        <span>Wersja 1.0 | Aktualny</span>
+                    </div>
+                </div>
+                <p>Przepisy regulujące działalność biznesową, handlową i korporacyjną.</p>
+                <div class="doc-footer">
+                    <span class="doc-meta">Ostatnia aktualizacja: 15.12.2025</span>
+                    <a href="https://docs.google.com/document/d/TWOJ_LINK_7" target="_blank" class="btn btn-small btn-doc" aria-label="Otwórz Prawo Gospodarcze"><i class="fas fa-external-link-alt"></i> Otwórz</a>
+                </div>
+            </div>
+
+            <div class="doc-card fade-in">
+                <div class="doc-header">
+                    <div class="doc-icon"><i class="fas fa-users"></i></div>
+                    <div class="doc-info">
+                        <h3>Kodeks Pracy</h3>
+                        <span>Wersja 1.0 | Aktualny</span>
+                    </div>
+                </div>
+                <p>Regulacje dotyczące zatrudnienia, praw pracowniczych i obowiązków pracodawców.</p>
+                <div class="doc-footer">
+                    <span class="doc-meta">Ostatnia aktualizacja: 15.12.2025</span>
+                    <a href="https://docs.google.com/document/d/TWOJ_LINK_8" target="_blank" class="btn btn-small btn-doc" aria-label="Otwórz Kodeks Pracy"><i class="fas fa-external-link-alt"></i> Otwórz</a>
+                </div>
+            </div>
+
+            <div class="doc-card fade-in">
+                <div class="doc-header">
+                    <div class="doc-icon"><i class="fas fa-users"></i></div>
+                    <div class="doc-info">
+                        <h3>Kodeks czegośtam</h3>
+                        <span>Wersja 1.0 | Aktualny</span>
+                    </div>
+                </div>
+                <p>Regulacje dotyczące życia.</p>
+                <div class="doc-footer">
+                    <span class="doc-meta">Ostatnia aktualizacja: 15.12.2025</span>
+                    <a href="https://docs.google.com/document/d/TWOJ_LINK_8" target="_blank" class="btn btn-small btn-doc" aria-label="Otwórz Kodeks czegośtam"><i class="fas fa-external-link-alt"></i> Otwórz</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="gallery" id="gallery">
+        <div class="section-header fade-in">
+            <h2>Panel informacyjny - DOJ</h2>
+            <p>Miejsce z harmonogramem działań, historycznymi sprawami oraz aktualną hierarchią departamentu.</p>
+        </div>
+        <div class="gallery-grid">
+            <a href="schedule.html" class="gallery-item fade-in" aria-label="Sala Rozpraw — Harmonogram">
+                <div class="gallery-placeholder"><i class="fas fa-gavel"></i><span>Sala Rozpraw</span></div>
+                <div class="gallery-caption">
+                    <h4>Sala Rozpraw</h4>
+                    <p>Miejsce prowadzenia spraw sądowych</p>
+                </div>
+            </a>
+            <a href="about.html#hierarchy" class="gallery-item fade-in" aria-label="Zespół DOJ — Struktura i Hierarchia">
+                <div class="gallery-placeholder"><i class="fas fa-users"></i><span>Zespół DOJ</span></div>
+                <div class="gallery-caption">
+                    <h4>Nasz Zespół</h4>
+                    <p>Profesjonaliści w służbie sprawiedliwości</p>
+                </div>
+            </a>
+            <a href="archive.html" class="gallery-item fade-in" aria-label="Archiwum Spraw — Archiwum">
+                <div class="gallery-placeholder"><i class="fas fa-book"></i><span>Archiwum</span></div>
+                <div class="gallery-caption">
+                    <h4>Archiwum Spraw</h4>
+                    <p>Historia orzecznictwa San Andreas</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <section class="recruitment" id="recruitment">
+        <div class="section-header fade-in">
+            <h2>Rekrutacja</h2>
+            <p>Dołącz do naszego zespołu i stań się częścią wymiaru sprawiedliwości</p>
+        </div>
+        <div class="recruitment-content fade-in">
+            <div class="recruitment-header">
+                <div class="recruitment-badge"><i class="fas fa-user-tie"></i></div>
+                <div class="recruitment-info">
+                    <h3>Aplikuj na stanowisko</h3>
+                    <span class="recruitment-status status-open">Rekrutacja otwarta</span>
+                </div>
+            </div>
+            <div class="requirements">
+                <h4><i class="fas fa-check-circle"></i> Wymagania</h4>
+                <ul class="req-list">
+                    <li><i class="fas fa-chevron-right"></i> Minimum 21 lat (IC)</li>
+                    <li><i class="fas fa-chevron-right"></i> Czysta kartoteka karna</li>
+                    <li><i class="fas fa-chevron-right"></i> Znajomość przepisów prawnych SA</li>
+                    <li><i class="fas fa-chevron-right"></i> Umiejętność pracy w zespole</li>
+                    <li><i class="fas fa-chevron-right"></i> Dyspozycyjność min. 15h tygodniowo</li>
+                    <li><i class="fas fa-chevron-right"></i> Poprawna znajomość języka polskiego</li>
+                </ul>
+            </div>
+            <div class="apply-form">
+                <div style="margin-bottom:1rem;color:rgba(255,255,255,.85);">
+                    Użyj poniższego formularza, aby wysłać podanie. Jeśli formularz się nie laduje odśwież strone.
+                </div>
+                <div style="width:100%;height:700px;border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,.08);">
+                    <iframe loading="lazy" src="https://docs.google.com/forms/d/e/1FAIpQLSemLzceRPM7CLKj7a37e1X6GCo-LUFCuxv0TETmTMoba7vx2g/viewform?usp=dialog" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0">Ładuję…</iframe>
+                </div>
+                <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform" target="_blank" rel="noopener noreferrer" style="display:inline-flex;justify-content:center;width:100%;margin-top:1rem;">
+                    <i class="fas fa-external-link-alt"></i> Otwórz formularz w nowej karcie
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Department of Justice</h4>
+                <p>Oficjalny strona Departamentu Sprawiedlowości w Los Santos <br> NXTRP 2.0</p>
+            </div>
+            <div class="footer-section">
+                <h4>Szybkie linki</h4>
+                <a href="#home">Strona główna</a>
+                <a href="documents.html">Dokumenty</a>
+                <a href="#recruitment">Rekrutacja</a>
+            </div>
+            <div class="footer-section">
+                <h4>Kontakt</h4>
+                <a href="https://discord.gg/rDNfymcqYW" target="_blank" rel="noopener noreferrer"><i class="fab fa-discord"></i> Discord Server</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 NXTRP 2.0 - DOJ. Wszelkie prawa zastrzeżone.</p>
+        </div>
+    </footer>
+
+    <script>
+        (function() {
+            const navLinks = document.querySelectorAll('.nav-links a');
+            const current = location.pathname.split('/').pop() || 'index.html';
+            navLinks.forEach(a => {
+                const href = a.getAttribute('href');
+                if (href === current || (href.endsWith('#home') && (current === '' || current === 'index.html'))) {
+                    a.classList.add('active');
+                    a.setAttribute('aria-current', 'page');
+                }
+            });
+
+            document.querySelectorAll('.btn-doc').forEach(btn => {
+                if (!btn.hasAttribute('aria-label')) {
+                    btn.setAttribute('aria-label', btn.textContent.trim());
+                }
+            });
+
+            const hamburger = document.getElementById('hamburger');
+            const mobileMenu = document.getElementById('mobileMenu');
+            if (hamburger && mobileMenu) {
+                hamburger.setAttribute('aria-expanded', 'false');
+                hamburger.addEventListener('click', (e) => {
+                    const open = mobileMenu.classList.toggle('open');
+                    hamburger.classList.toggle('open', open);
+                    hamburger.setAttribute('aria-expanded', String(open));
+                    mobileMenu.setAttribute('aria-hidden', String(!open));
+                });
+                mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+                    mobileMenu.classList.remove('open');
+                    hamburger.classList.remove('open');
+                    hamburger.setAttribute('aria-expanded', 'false');
+                    mobileMenu.setAttribute('aria-hidden', 'true');
+                }));
+                document.addEventListener('keydown', (ev) => {
+                    if (ev.key === 'Escape') {
+                        mobileMenu.classList.remove('open');
+                        hamburger.classList.remove('open');
+                        hamburger.setAttribute('aria-expanded', 'false');
+                        mobileMenu.setAttribute('aria-hidden', 'true');
+                    }
+                });
+            }
+        })();
+    </script>
+
+    <script src="js/core.js"></script>
+    <script src="js/schedule.js"></script>
+    <script src="js/archive.js"></script>
+    <script src="js/api.js"></script>
+</body>
+
+</html>

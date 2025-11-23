@@ -1,0 +1,216 @@
+/* ========== ARCHIVE SECTION ========== */
+
+.archive {
+    background: var(--dark);
+}
+
+.archive-controls {
+    display: flex;
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+/* search i select wyglądają jak w schedule (jasny tekst) */
+
+.archive-search,
+.archive-verdict-filter {
+    padding: .8rem 1.2rem;
+    background: rgba(255, 255, 255, .05);
+    border: 1px solid rgba(201, 162, 39, .3);
+    border-radius: 10px;
+    color: var(--light);
+    font-size: .9rem;
+    transition: border-color .3s;
+}
+
+.archive-search:focus,
+.archive-verdict-filter:focus {
+    outline: none;
+    border-color: var(--accent);
+    background: rgba(255, 255, 255, .08);
+}
+
+
+/* select dodatkowe ustawienia jak w schedule */
+
+.archive-verdict-filter {
+    min-width: 200px;
+    cursor: pointer;
+}
+
+.archive-verdict-filter option {
+    background: var(--dark);
+    color: var(--light);
+}
+
+.archive-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* Karty i badge - używamy stylu podobnego do schedule (.trial-card itp.) */
+
+
+/* dzięki temu elementy archive będą miały ten sam "look & feel" co schedule */
+
+.trial-card {
+    background: linear-gradient(145deg, rgba(26, 35, 126, .4), rgba(13, 20, 33, .9));
+    border: 1px solid rgba(201, 162, 39, .2);
+    border-radius: 16px;
+    padding: 1.5rem;
+    transition: all .4s;
+    position: relative;
+    overflow: hidden;
+}
+
+.trial-card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 15px 40px rgba(201, 162, 39, .15);
+    transform: translateY(-5px);
+}
+
+.trial-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(201, 162, 39, .1), transparent);
+    transition: left .5s;
+}
+
+.trial-card:hover::before {
+    left: 100%;
+}
+
+
+/* Badges */
+
+.trial-badge {
+    display: inline-block;
+    padding: .4rem .8rem;
+    background: rgba(201, 162, 39, .2);
+    border-radius: 20px;
+    font-size: .75rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.status-scheduled {
+    background: rgba(255, 193, 7, .2);
+    color: #ffc107;
+}
+
+
+/* Trial infos (kopiowane z schedule dla spójności) */
+
+.trial-title {
+    font-size: 1.1rem;
+    margin-bottom: .8rem;
+    color: var(--light);
+}
+
+.trial-info {
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+    margin-bottom: 1.2rem;
+    font-size: .9rem;
+}
+
+.trial-info-row {
+    display: flex;
+    gap: .8rem;
+    align-items: flex-start;
+}
+
+.trial-info-row i {
+    color: var(--accent);
+    min-width: 20px;
+    margin-top: 2px;
+}
+
+.trial-info-label {
+    font-weight: 500;
+    color: rgba(255, 255, 255, .8);
+    min-width: 80px;
+}
+
+.trial-info-value {
+    color: rgba(255, 255, 255, .6);
+}
+
+.trial-description {
+    font-size: .85rem;
+    color: rgba(255, 255, 255, .6);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+}
+
+
+/* Dopasowanie istniejących sekcji verdict / justification / sentence do nowego tonu */
+
+
+/* zachowujemy ich strukturę, ale wyglądujemy jak wewnątrz karty */
+
+.trial-verdict {
+    background: rgba(255, 255, 255, .02);
+    border-left: 3px solid var(--accent);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.trial-verdict-title {
+    font-weight: 600;
+    color: var(--accent);
+    font-size: .9rem;
+    margin-bottom: .5rem;
+}
+
+.trial-verdict-text {
+    font-size: .85rem;
+    color: rgba(255, 255, 255, .8);
+    line-height: 1.6;
+}
+
+.trial-justification {
+    background: rgba(255, 255, 255, .02);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.trial-justification-title {
+    font-weight: 600;
+    color: rgba(201, 162, 39, .9);
+    font-size: .9rem;
+    margin-bottom: .5rem;
+}
+
+.trial-justification-text {
+    font-size: .85rem;
+    color: rgba(255, 255, 255, .7);
+    line-height: 1.6;
+}
+
+.trial-sentence {
+    font-size: .9rem;
+    color: rgba(255, 255, 255, .8);
+    padding: .8rem;
+    background: rgba(244, 67, 54, .06);
+    border-radius: 8px;
+    border-left: 3px solid #f44336;
+}
