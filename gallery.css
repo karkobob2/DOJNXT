@@ -1,5 +1,3 @@
-/* ========== GALLERY SECTION ========== */
-
 .gallery {
     background: linear-gradient(180deg, var(--dark) 0%, var(--secondary) 100%);
 }
@@ -70,4 +68,40 @@
 .gallery-caption p {
     font-size: .8rem;
     color: rgba(255, 255, 255, .7);
+}
+
+.gallery-item a,
+.gallery-item a:link,
+.gallery-item a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+a.gallery-item,
+a.gallery-item:link,
+a.gallery-item:visited,
+a.gallery-item:hover,
+a.gallery-item:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+a.gallery-item .gallery-placeholder span,
+a.gallery-item .gallery-caption h4,
+a.gallery-item .gallery-caption p {
+    text-decoration: none;
+}
+
+.gallery-item,
+.gallery-item * {
+    color: inherit;
+}
+
+.gallery-item:hover,
+.gallery-item:hover .gallery-placeholder,
+.gallery-item:hover .gallery-caption,
+.gallery-item:hover .gallery-caption h4,
+.gallery-item:hover .gallery-caption p,
+.gallery-item:hover .gallery-placeholder span {
+    color: var(--light);
 }

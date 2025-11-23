@@ -1,3 +1,25 @@
+/* Theme variables: domyślnie ciemny. (light-theme removed) */
+
+:root {
+    /* dark theme values (default) */
+    --dark: #0d141f;
+    --light: #ffffff;
+    --primary: #121a3b;
+    --secondary: #1a237e;
+    --accent: #C9A227;
+    /* global transitions */
+    --transition-fast: 160ms;
+    --transition-medium: 300ms;
+}
+
+
+/* ensure smooth visual transitions for color/background changes */
+
+html {
+    transition: background var(--transition-fast) ease, color var(--transition-fast) ease;
+}
+
+
 /* ========== BUTTONS ========== */
 
 .btn {
@@ -52,6 +74,7 @@
     color: var(--dark);
 }
 
+
 /* ========== DOC CARDS ========== */
 
 .docs-grid {
@@ -90,4 +113,33 @@
 
 .doc-card:hover::before {
     left: 100%;
+}
+
+
+/* Aktywny link w nawigacji */
+
+.nav-links a.active,
+.nav-links a[aria-current="page"] {
+    color: var(--accent);
+    font-weight: 700;
+    box-shadow: inset 0 -3px 0 var(--accent);
+}
+
+
+/* Skip link (dostępność) */
+
+.skip-link {
+    position: absolute;
+    left: -999px;
+    top: -999px;
+    background: var(--accent);
+    color: var(--dark);
+    padding: .5rem .75rem;
+    border-radius: 6px;
+    z-index: 1000;
+}
+
+.skip-link:focus {
+    left: 1rem;
+    top: 1rem;
 }

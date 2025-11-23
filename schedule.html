@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="style/base.css">
     <link rel="stylesheet" href="style/layout.css">
     <link rel="stylesheet" href="style/components.css">
-
     <link rel="stylesheet" href="style/hero.css">
     <link rel="stylesheet" href="style/about.css">
     <link rel="stylesheet" href="style/documents.css">
@@ -18,24 +17,25 @@
     <link rel="stylesheet" href="style/gallery.css">
     <link rel="stylesheet" href="style/recruitment.css">
     <link rel="stylesheet" href="style/footer.css">
-    <link rel="stylesheet" href="style/mobile.css"></head>
+    <link rel="stylesheet" href="style/mobile.css">
+</head>
 
 <body>
+    <a class="skip-link" href="#maincontent">Przejdź do treści</a>
     <div class="loader">
         <div class="loader-icon"></div>
     </div>
     <div class="overlay" id="overlay"></div>
 
-    <nav id="navbar">
+    <nav id="navbar" role="navigation" aria-label="Główna nawigacja">
         <div class="nav-container">
             <a href="index.html#home" class="logo"><i class="fas fa-balance-scale"></i> DOJ</a>
             <ul class="nav-links">
                 <li><a href="index.html#home">Strona Główna</a></li>
-                <li><a href="index.html#about">O Nas</a></li>
-                <li><a href="index.html#documents">Dokumenty</a></li>
+                <li><a href="about.html">O Nas</a></li>
+                <li><a href="documents.html">Dokumenty</a></li>
                 <li><a href="schedule.html">Harmonogram</a></li>
                 <li><a href="archive.html">Archiwum</a></li>
-                <li><a href="index.html#gallery">Galeria</a></li>
                 <li><a href="index.html#recruitment">Rekrutacja</a></li>
             </ul>
             <button class="hamburger" id="hamburger">
@@ -44,15 +44,16 @@
         </div>
     </nav>
 
-    <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
         <a href="index.html#home">Strona Główna</a>
-        <a href="index.html#about">O Nas</a>
-        <a href="index.html#documents">Dokumenty</a>
+        <a href="about.html">O Nas</a>
+        <a href="documents.html">Dokumenty</a>
         <a href="schedule.html">Harmonogram</a>
         <a href="archive.html">Archiwum</a>
-        <a href="index.html#gallery">Galeria</a>
         <a href="index.html#recruitment">Rekrutacja</a>
     </div>
+
+    <a id="maincontent" tabindex="-1"></a>
 
     <section class="schedule" id="schedule">
         <div class="section-header fade-in">
@@ -98,10 +99,78 @@
         </div>
     </footer>
 
-<script src="js/core.js"></script>
-<script src="js/schedule.js"></script>
-<script src="js/archive.js"></script>
-<script src="js/api.js"></script>
+    <script>
+        (function() {
+            const navLinks = document.querySelectorAll('.nav-links a');
+            const current = location.pathname.split('/').pop() || 'index.html';
+            navLinks.forEach(a => {
+                const href = a.getAttribute('href');
+                if (href === current || href === 'schedule.html') {
+                    a.classList.add('active');
+                    a.setAttribute('aria-current', 'page');
+                }
+            });
+
+            const hamburger = document.getElementById('hamburger');
+            const mobileMenu = document.getElementById('mobileMenu');
+            if (hamburger && mobileMenu) {
+                hamburger.setAttribute('aria-expanded', 'false');
+                hamburger.addEventListener('click', () => {
+                    const open = mobileMenu.classList.toggle('open');
+                    hamburger.classList.toggle('open', open);
+                    hamburger.setAttribute('aria-expanded', String(open));
+                    mobileMenu.setAttribute('aria-hidden', String(!open));
+                });
+                mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+                    mobileMenu.classList.remove('open');
+                    hamburger.classList.remove('open');
+                    hamburger.setAttribute('aria-expanded', 'false');
+                    mobileMenu.setAttribute('aria-hidden', 'true');
+                }));
+                document.addEventListener('keydown', (ev) => {
+                    if (ev.key === 'Escape') {
+                        mobileMenu.classList.remove('open');
+                        hamburger.classList.remove('open');
+                        hamburger.setAttribute('aria-expanded', 'false');
+                        mobileMenu.setAttribute('aria-hidden', 'true');
+                    }
+                });
+            }
+
+            async function loadSchedule() {
+                const grid = document.getElementById('scheduleGrid');
+                try {
+                    const res = await fetch('/api/schedule');
+                    if (!res.ok) throw new Error('no-data');
+                    const items = await res.json();
+                    if (!Array.isArray(items) || items.length === 0) return;
+                    grid.innerHTML = '';
+                    items.forEach(it => {
+                        const card = document.createElement('div');
+                        card.className = 'trial-card fade-in';
+                        card.innerHTML = `
+                            <div class="trial-badge">${it.room || 'Sala'}</div>
+                            <h3 class="trial-title">${it.name || ''}</h3>
+                            <div class="trial-info">
+                                <div class="trial-info-row"><div class="trial-info-label">Sędzia</div><div class="trial-info-value">${it.judge || ''}</div></div>
+                                <div class="trial-info-row"><div class="trial-info-label">Data</div><div class="trial-info-value">${it.date || ''} ${it.time || ''}</div></div>
+                            </div>
+                            <p class="trial-description">${it.description || ''}</p>
+                        `;
+                        grid.appendChild(card);
+                    });
+                } catch (e) {
+                    console.warn('No schedule API or failed to load:', e);
+                }
+            }
+            loadSchedule();
+        })();
+    </script>
+
+    <script src="js/core.js"></script>
+    <script src="js/schedule.js"></script>
+    <script src="js/archive.js"></script>
+    <script src="js/api.js"></script>
 </body>
 
 </html>
