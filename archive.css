@@ -1,0 +1,113 @@
+/* ========== ARCHIVE SECTION ========== */
+
+.archive {
+    background: linear-gradient(180deg, var(--dark) 0%, var(--primary) 100%);
+}
+
+.archive-controls {
+    display: flex;
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.archive-search,
+.archive-verdict-filter {
+    padding: .8rem 1.2rem;
+    background: rgba(255, 255, 255, .05);
+    border: 1px solid rgba(201, 162, 39, .3);
+    border-radius: 10px;
+    color: var(--light);
+    font-size: .9rem;
+    transition: border-color .3s;
+}
+
+.archive-search:focus,
+.archive-verdict-filter:focus {
+    outline: none;
+    border-color: var(--accent);
+    background: rgba(255, 255, 255, .08);
+}
+
+.archive-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Badges */
+
+.status-innocent {
+    background: rgba(76, 175, 80, .2);
+    color: #4caf50;
+}
+
+.status-guilty {
+    background: rgba(244, 67, 54, .2);
+    color: #f44336;
+}
+
+.status-settled {
+    background: rgba(33, 150, 243, .2);
+    color: #2196f3;
+}
+
+/* Verdict section */
+
+.trial-verdict {
+    background: rgba(201, 162, 39, .15);
+    border-left: 3px solid var(--accent);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.trial-verdict-title {
+    font-weight: 600;
+    color: var(--accent);
+    font-size: .9rem;
+    margin-bottom: .5rem;
+}
+
+.trial-verdict-text {
+    font-size: .85rem;
+    color: rgba(255, 255, 255, .8);
+    line-height: 1.6;
+}
+
+/* Justification */
+
+.trial-justification {
+    background: rgba(255, 255, 255, .03);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.trial-justification-title {
+    font-weight: 600;
+    color: rgba(201, 162, 39, .9);
+    font-size: .9rem;
+    margin-bottom: .5rem;
+}
+
+.trial-justification-text {
+    font-size: .85rem;
+    color: rgba(255, 255, 255, .7);
+    line-height: 1.6;
+}
+
+/* Sentence */
+
+.trial-sentence {
+    font-size: .9rem;
+    color: rgba(255, 255, 255, .8);
+    padding: .8rem;
+    background: rgba(244, 67, 54, .1);
+    border-radius: 8px;
+    border-left: 3px solid #f44336;
+}

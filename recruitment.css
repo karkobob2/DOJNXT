@@ -1,0 +1,158 @@
+/* ========== RECRUITMENT SECTION ========== */
+
+.recruitment {
+    background: var(--dark);
+}
+
+.recruitment-content {
+    max-width: 900px;
+    margin: 0 auto;
+    background: linear-gradient(145deg,
+        rgba(26, 35, 126, .3),
+        rgba(13, 20, 33, .8)
+    );
+    border: 1px solid rgba(201, 162, 39, .3);
+    border-radius: 20px;
+    padding: 2.5rem;
+}
+
+.recruitment-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.recruitment-badge {
+    width: 80px;
+    height: 80px;
+    background: rgba(201, 162, 39, .2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid var(--accent);
+}
+
+.recruitment-badge i {
+    font-size: 2.5rem;
+    color: var(--accent);
+}
+
+.recruitment-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
+}
+
+.recruitment-status {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .4rem .8rem;
+    border-radius: 50px;
+    font-size: .8rem;
+    font-weight: 600;
+}
+
+.status-open {
+    background: rgba(76, 175, 80, .2);
+    color: #4caf50;
+}
+
+.status-open::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: #4caf50;
+    border-radius: 50%;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: .5; }
+}
+
+/* Requirements */
+
+.requirements {
+    margin: 1.5rem 0;
+}
+
+.requirements h4 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: var(--accent);
+}
+
+.req-list {
+    list-style: none;
+}
+
+.req-list li {
+    padding: .6rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    font-size: .9rem;
+}
+
+.req-list li i {
+    color: var(--accent);
+    font-size: .8rem;
+}
+
+/* Form */
+
+.apply-form {
+    margin-top: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: .4rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, .8);
+    font-size: .9rem;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: .8rem;
+    background: rgba(255, 255, 255, .05);
+    border: 1px solid rgba(255, 255, 255, .2);
+    border-radius: 10px;
+    color: var(--light);
+    font-size: .9rem;
+    transition: border-color .3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+.form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.form-group select option {
+    background: var(--dark);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}

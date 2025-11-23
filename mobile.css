@@ -1,0 +1,34 @@
+/* ========== MOBILE / RESPONSIVE ========== */
+
+@media(max-width: 768px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .recruitment-header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .docs-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .schedule-grid,
+    .archive-grid {
+        grid-template-columns: 1fr;
+    }
+}
