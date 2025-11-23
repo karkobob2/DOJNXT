@@ -10,6 +10,8 @@
     /* global transitions */
     --transition-fast: 160ms;
     --transition-medium: 300ms;
+    /* lekko większy tekst globalnie */
+    --text-scale: 1.06;
 }
 
 
@@ -17,6 +19,7 @@
 
 html {
     transition: background var(--transition-fast) ease, color var(--transition-fast) ease;
+    font-size: calc(16px * var(--text-scale));
 }
 
 
@@ -142,4 +145,43 @@ html {
 .skip-link:focus {
     left: 1rem;
     top: 1rem;
+}
+
+
+/* baza (łatwo dostosować przez --text-scale) */
+
+body {
+    font-size: calc(1rem * var(--text-scale));
+    line-height: 1.6;
+}
+
+
+/* nagłówki - delikatne powiększenie */
+
+h1 {
+    font-size: calc(2.25rem * var(--text-scale));
+}
+
+h2 {
+    font-size: calc(1.75rem * var(--text-scale));
+}
+
+h3 {
+    font-size: calc(1.25rem * var(--text-scale));
+}
+
+h4 {
+    font-size: calc(1rem * var(--text-scale));
+}
+
+
+/* teksty pomocnicze / przyciski */
+
+p,
+li,
+a,
+.btn,
+.doc-meta,
+.trial-info-value {
+    font-size: calc(1rem * var(--text-scale));
 }

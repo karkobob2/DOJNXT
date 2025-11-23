@@ -14,11 +14,11 @@
 .schedule-search,
 .schedule-sort {
     padding: .8rem 1.2rem;
+    font-size: calc(.95rem * var(--text-scale));
     background: rgba(255, 255, 255, .05);
     border: 1px solid rgba(201, 162, 39, .3);
     border-radius: 10px;
     color: var(--light);
-    font-size: .9rem;
     transition: border-color .3s;
 }
 
@@ -95,7 +95,7 @@
 }
 
 .trial-title {
-    font-size: 1.1rem;
+    font-size: calc(1.1rem * var(--text-scale));
     margin-bottom: .8rem;
     color: var(--light);
 }
@@ -105,7 +105,7 @@
     flex-direction: column;
     gap: .8rem;
     margin-bottom: 1.2rem;
-    font-size: .9rem;
+    font-size: calc(.9rem * var(--text-scale));
 }
 
 .trial-info-row {
@@ -131,7 +131,7 @@
 }
 
 .trial-description {
-    font-size: .85rem;
+    font-size: calc(.85rem * var(--text-scale));
     color: rgba(255, 255, 255, .6);
     line-height: 1.6;
     margin-bottom: 1rem;
